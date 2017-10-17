@@ -1,2 +1,3 @@
 # TG-Map
-A Javascript Map to show the Swiss canton Thurgau with the municipalities.
+A Javascript Map for showing the Swiss canton Thurgau.
+Demo will be available soon.
