@@ -1,0 +1,56 @@
+#graph {
+
+}
+
+.background {
+    fill: none;
+    pointer-events: all;
+}
+
+#border {
+    fill: none;
+    stroke: #fff;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+#municipalities {
+    fill: #e3e3e3;
+}
+
+#municipalities :hover {
+    fill: #c7c7c7;
+}
+
+#municipalities .active {
+    fill: orange;
+}
+
+#muniText {
+    position: absolute;
+    text-align: center;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+
+#lakes {
+    fill: #b3b3f3;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 100px;
+    height: 28px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: white;
+    border-radius: 8px;
+    pointer-events: none;
+}
