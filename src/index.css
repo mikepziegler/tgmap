@@ -1,10 +1,18 @@
-#graph {
-
-}
-
 .background {
     fill: none;
     pointer-events: all;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 100px;
+    height: 28px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: white;
+    border-radius: 8px;
+    pointer-events: none;
 }
 
 #border {
@@ -12,6 +20,10 @@
     stroke: #fff;
     stroke-linejoin: round;
     stroke-linecap: round;
+}
+
+#lakes {
+    fill: #b3b3f3;
 }
 
 #municipalities {
@@ -36,21 +48,4 @@
     border-radius: 8px;
     pointer-events: none;
     opacity: 0;
-}
-
-
-#lakes {
-    fill: #b3b3f3;
-}
-
-.tooltip {
-    position: absolute;
-    text-align: center;
-    width: 100px;
-    height: 28px;
-    padding: 2px;
-    font: 12px sans-serif;
-    background: white;
-    border-radius: 8px;
-    pointer-events: none;
 }

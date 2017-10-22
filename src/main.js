@@ -92,12 +92,7 @@ var muniArr = [
 
 var width = 1500,
     height = 900,
-    //added
     centered;
-//active = d3.select(null);
-
-var projection = d3.geo.mercator();
-
 
 var path = d3.geo.path()
     .projection(null);
@@ -106,19 +101,17 @@ var svg = d3.select("#graph").append("svg")
     .attr("width", width)
     .attr("height", height);
 
-svg.append("rect")
-    .attr("class", "background")
-    .attr("width", width)
-    .attr("height", height)
-    //added
-    .on("click", clicked);
-
-//added
 var graph = d3.select("#graph").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
-//added
+svg.append("rect")
+    .attr("class", "background")
+    .attr("width", width)
+    .attr("height", height)
+    .on("click", clicked);
+
+
 var g = svg.append("g");
 
 d3.json("tg-municipalities-lakes.json", function(error, tg) {
