@@ -130,8 +130,12 @@ To make the map more interactive, an hover and a click event was given to the sh
 #### Hover event
 Change the color to Orange, when Mouse is hovering over the shape.
 ```
-
+#municipalities .active {
+    fill: orange;
+}
 ```
+By the way, it will be replaced with a javascript function in the future.
+
 
 Outputting the name of the municipality as a popover by hovering over the shape.
 ```
@@ -248,4 +252,19 @@ var muniArr = [
 ];
 ```
 
-Believe me, it wasn't pleasant
+Believe me, it wasn't pleasant to write all the names. But it won't stay forever, because I'll find a way to output the names from somewhere else.
+
+
+## Upcoming features
+
+* Window for visualising data, for example the amount of citizens for each municipality. The website will get those datas by opendata.ch
+* Window for showing pictures of the landscape of every municipalities. It will get those pictures from the websites of the municipalities, instagram (perhaps), Google Images (perhaps) or from better sources.
+* Moving in zoom
+
+## Sources
+
+* [Swiss-maps] (https://github.com/interactivethings/swiss-maps) from InteractiveThings
+* [Let's make a map] (https://bost.ocks.org/mike/map/) by Mike Bostock
+
+##Author
+Mike Zye
