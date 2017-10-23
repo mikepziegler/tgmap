@@ -90,8 +90,8 @@ var muniArr = [
     [4741, "Lommis"]
 ];
 
-var width = 1500,
-    height = 900,
+var width = 955,
+    height = 590,
     centered;
 
 var path = d3.geo.path()
