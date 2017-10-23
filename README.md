@@ -266,5 +266,5 @@ Believe me, it wasn't pleasant to write all the names. But it won't stay forever
 * [Swiss-maps] (https://github.com/interactivethings/swiss-maps) from InteractiveThings
 * [Let's make a map] (https://bost.ocks.org/mike/map/) by Mike Bostock
 
-##Author
+## Author
 Mike Zye
