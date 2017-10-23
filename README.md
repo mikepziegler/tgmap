@@ -5,14 +5,14 @@ Demo will be available soon.
 ## Documentation
 
 ### Get the geodata
-To get the data about the geographical shapes from Thurgau, I first needed to make the steps from [swiss maps] (https://github.com/interactivethings/swiss-maps).
+To get the data about the geographical shapes from Thurgau, I first needed to make the steps from [swiss maps](https://github.com/interactivethings/swiss-maps).
 After that, I created the file "tg-municipalities" by entering the command
 
 ```
 make topo/tg-municipalities-lakes.json
 ```
 
-Thanks for [herrstucki] (https://github.com/herrstucki) for helping me out.
+Thanks for [herrstucki](https://github.com/herrstucki) for helping me out.
 
 ## html file "index.html"
 This is the smallest part of creating a javascript map. I made a link to "main.js", which will execute the code and make the map.
@@ -263,8 +263,8 @@ Believe me, it wasn't pleasant to write all the names. But it won't stay forever
 
 ## Sources
 
-* [Swiss-maps] (https://github.com/interactivethings/swiss-maps) from InteractiveThings
-* [Let's make a map] (https://bost.ocks.org/mike/map/) by Mike Bostock
+* [Swiss-maps](https://github.com/interactivethings/swiss-maps) from InteractiveThings
+* [Let's make a map](https://bost.ocks.org/mike/map/) by Mike Bostock
 
 ## Author
 Mike Zye

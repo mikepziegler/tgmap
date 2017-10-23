@@ -140,6 +140,7 @@ d3.json("tg-municipalities-lakes.json", function(error, tg) {
 
 function clicked(d) {
     var x, y, k;
+
     if (d && centered !== d) {
         var centroid = path.centroid(d);
         x = centroid[0];
@@ -152,6 +153,7 @@ function clicked(d) {
         k = 1;
         centered = null;
     }
+
     g.selectAll("path")
         .classed("active", centered && function(d) { return d === centered; });
     g.transition()
@@ -170,7 +172,7 @@ function mouseover(d) {
 function getMName(d) {
     for (i = 0; i < muniArr.length; i++) {
         if (d.id === muniArr[i][0]) {
-            return muniArr[i][1];
+            return muniArr[i][1] || d.id;
             continue;
         }
     }
