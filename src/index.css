@@ -1,7 +1,69 @@
-iframe {
-    width: 960px;
-    height: 600px;
-    margin: 100px auto;
-    display: block;
-    overflow: hidden;
+.background {
+    fill: none;
+    pointer-events: all;
+}
+
+.block {
+    background-color: palegreen;
+    width: 80%;
+    height: 200px;
+    position: fixed;
+    display: inline-block;
+    bottom: 10%;
+}
+
+.container {
+    position: relative;
+
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 100px;
+    height: 28px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: white;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+#border {
+    fill: none;
+    stroke: #fff;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+#lakes {
+    fill: #b3b3f3;
+}
+
+#graph {
+
+}
+
+#municipalities {
+    fill: #e3e3e3;
+}
+
+#municipalities :hover {
+    fill: #c7c7c7;
+}
+
+#municipalities .active {
+    fill: orange;
+}
+
+#muniText {
+    position: absolute;
+    text-align: center;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
 }

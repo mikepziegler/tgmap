@@ -107,6 +107,13 @@ d3.json("tg-municipalities-lakes.json", function(error, tg) {
 
 And those are the CSS-Ids:
 ```
+#border {
+    fill: none;
+    stroke: #fff;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
 #lakes {
     fill: #b3b3f3;
 }
@@ -264,6 +271,7 @@ Believe me, it wasn't pleasant to write all the names. But it won't stay forever
 ## Sources
 
 * [Swiss-maps](https://github.com/interactivethings/swiss-maps) from InteractiveThings
+* [Canton Zurich](http://bl.ocks.org/herrstucki/10258270), Author: herrstucki
 * [Let's make a map](https://bost.ocks.org/mike/map/) by Mike Bostock
 
 ## Author

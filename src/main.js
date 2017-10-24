@@ -90,9 +90,11 @@ var muniArr = [
     [4741, "Lommis"]
 ];
 
-var width = 955,
-    height = 590,
+var width = window.innerWidth,
+    height = window.innerHeight,
     centered;
+
+var projection = null;
 
 var path = d3.geo.path()
     .projection(null);
@@ -122,7 +124,8 @@ d3.json("tg-municipalities-lakes.json", function(error, tg) {
         .enter().append("path")
         .attr("d", path)
         .on("click", clicked)
-        .on("mouseover", mouseover);
+        .on("mouseover", mouseover)
+        .on("mouseout", mouseout);
 
     g.append("g")
         .attr("id", "lakes")
@@ -140,20 +143,22 @@ d3.json("tg-municipalities-lakes.json", function(error, tg) {
 
 function clicked(d) {
     var x, y, k;
-
     if (d && centered !== d) {
         var centroid = path.centroid(d);
         x = centroid[0];
         y = centroid[1];
         k = 4;
         centered = d;
+
+
     } else {
         x = width / 2;
         y = height / 2;
         k = 1;
         centered = null;
-    }
 
+
+    }
     g.selectAll("path")
         .classed("active", centered && function(d) { return d === centered; });
     g.transition()
@@ -167,6 +172,12 @@ function mouseover(d) {
         .html(getMName(d))
         .style("left", (d3.event.pageX) + "px")
         .style("top", (d3.event.pageY - 28) + "px");
+
+}
+
+function mouseout(d) {
+    graph.style("opacity", 0)
+        .html();
 }
 
 function getMName(d) {
