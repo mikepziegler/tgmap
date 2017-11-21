@@ -7,22 +7,14 @@
     background-color: palegreen;
     width: 80%;
     height: 200px;
-    position: fixed;
-    display: inline-block;
+    margin: 0 auto;
     bottom: 10%;
-}
-
-.container {
-    position: relative;
-
 }
 
 .tooltip {
     position: absolute;
     text-align: center;
-    width: 100px;
-    height: 28px;
-    padding: 2px;
+    padding: 10px;
     font: 12px sans-serif;
     background: white;
     border-radius: 8px;
@@ -36,16 +28,22 @@
     stroke-linecap: round;
 }
 
+#container {
+    padding: 10px;
+}
+
+#graph {
+    width: 100%;
+    height: 600px;
+}
+
 #lakes {
     fill: #b3b3f3;
 }
 
-#graph {
-
-}
-
 #municipalities {
     fill: #e3e3e3;
+    box-shadow: 1px 1px 1px #bbb;
 }
 
 #municipalities :hover {
@@ -53,6 +51,7 @@
 }
 
 #municipalities .active {
+    border: 1px solid;
     fill: orange;
 }
 
@@ -67,3 +66,4 @@
     pointer-events: none;
     opacity: 0;
 }
+

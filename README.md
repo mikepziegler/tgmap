@@ -1,25 +1,25 @@
 # TG-Map
-A Javascript Map for showing the Swiss canton Thurgau. It shows the municipalities and the lake of constance or "Bodensee" in german.
+A Javascript map for showing the Swiss canton Thurgau. It shows the municipalities and Lake of Constance or "Bodensee" in German.
 Demo will be available soon.
 
 ## Documentation
 
 ### Get the geodata
-To get the data about the geographical shapes from Thurgau, I first needed to make the steps from [swiss maps](https://github.com/interactivethings/swiss-maps).
+To get the data about the geographical shapes of Thurgau, I first needed to take steps as explained on the repository "[swiss maps](https://github.com/interactivethings/swiss-maps)".
 After that, I created the file "tg-municipalities" by entering the command
 
 ```
 make topo/tg-municipalities-lakes.json
 ```
 
-Thanks for [herrstucki](https://github.com/herrstucki) for helping me out.
+Thanks to [herrstucki](https://github.com/herrstucki) for helping me out.
 
 ## html file "index.html"
-This is the smallest part of creating a javascript map. I made a link to "main.js", which will execute the code and make the map.
+This is the smallest part of creating a javascript map. I made a link to "main.js", which will execute the code and draw the map.
 Furthermore there are links to the d3.js and the topojson.js scripts.
 The design of the html file will be changed soon, but for this part, the design is unnecessary at the moment.
 
-I will probably change this part of the documentation to make it more appealing for the eyes, after the website is built.
+I will probably change this part of the documentation to make it more appealing to the user, after the website is built.
 
 ## The Javascript file "main.js"
 This is the exciting part of creating the map.
@@ -33,7 +33,7 @@ var width = 1500,
 ```
 
 To draw the shapes, I have to select the element in the html and make two variables.
-The variable "svg" draws those shapes and "graph" will be used, when the mouse is hovering over a shape.
+The variable "svg" draws those shapes and "graph" will be used when the mouse is hovering on a shape.
 ```
 var svg = d3.select("#graph").append("svg")
     .attr("width", width)
@@ -59,7 +59,7 @@ Class "tooltop" in css:
 }
 ```
 
-Furthermore I append the shape, the size, the background and a click event at svg.
+Furthermore, I append the shape, the size, the background and a click event at svg.
 ```
 svg.append("rect")
     .attr("class", "background")
@@ -77,7 +77,7 @@ The class "Background" in css file:
 ```
 
 ### Drawing Shapes
-The function for drawing the municipalities and the lake of constance. All municipalities becomes the CSS-Id "municipalities" and the click and hover event.
+The function for drawing the municipalities and Lake of Constance. All municipalities get the CSS-Id "municipalities" and the click and hover event.
 
 ```
 d3.json("tg-municipalities-lakes.json", function(error, tg) {
@@ -131,11 +131,11 @@ And those are the CSS-Ids:
 }
 ```
 
-### Mouse-Events
+### Mouse Events
 To make the map more interactive, an hover and a click event was given to the shapes.
 
 #### Hover event
-Change the color to Orange, when Mouse is hovering over the shape.
+Change the color to orange, when the mouse is hovering on the shape.
 ```
 #municipalities .active {
     fill: orange;
@@ -144,7 +144,7 @@ Change the color to Orange, when Mouse is hovering over the shape.
 By the way, it will be replaced with a javascript function in the future.
 
 
-Outputting the name of the municipality as a popover by hovering over the shape.
+Outputting the name of the municipality as a popover by hovering on the shape.
 ```
 function mouseover(d) {
     graph.style("opacity", .9)
@@ -163,7 +163,7 @@ function getMName(d) {
 }
 ```
 
-The function getMName returns the name of the municipality by detecting the associated ID. The Names are in an array.
+The function getMName returns the name of the municipality by detecting the associated ID. The names are in an array.
 I had to write every name of the municipalities.
 ```
 var muniArr = [
@@ -264,8 +264,8 @@ Believe me, it wasn't pleasant to write all the names. But it won't stay forever
 
 ## Upcoming features
 
-* Window for visualising data, for example the amount of citizens for each municipality. The website will get those datas by opendata.ch
-* Window for showing pictures of the landscape of every municipalities. It will get those pictures from the websites of the municipalities, instagram (perhaps), Google Images (perhaps) or from better sources.
+* Window for visualising data, for example the number of citizens for each municipality. The website will get this data from opendata.ch
+* Window for showing pictures of the landscape of every municipality. It will get those pictures from the websites of the municipalities, instagram (perhaps), Google Images (perhaps) or from better sources.
 * Moving in zoom
 
 ## Sources
