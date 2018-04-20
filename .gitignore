@@ -1,2 +1,5 @@
 
 src/.DS_Store
+src/js/d3.v3.min.js
+src/js/topojson.v1.min.js
+src/js/jquery.min.js
