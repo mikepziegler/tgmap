@@ -2,7 +2,7 @@
 A Javascript map for showing the Swiss canton Thurgau. It shows the municipalities and Lake of Constance or "Bodensee" in German.
 Demo will be available soon.
 
-## Documentation
+# Documentation
 
 ### Get the geodata
 To get the data about the geographical shapes of Thurgau, I first needed to take steps as explained on the repository "[swiss maps](https://github.com/interactivethings/swiss-maps)".
@@ -14,17 +14,25 @@ make topo/tg-municipalities-lakes.json
 
 Thanks to [herrstucki](https://github.com/herrstucki) for helping me out.
 
-## html file "index.html"
+Both versions have the same 
+
+## Version 2.0
+
+Will be edited in the future...
+
+## Version 1.0
+
+### html file "index.html"
 This is the smallest part of creating a javascript map. I made a link to "main.js", which will execute the code and draw the map.
 Furthermore there are links to the d3.js and the topojson.js scripts.
 The design of the html file will be changed soon, but for this part, the design is unnecessary at the moment.
 
 I will probably change this part of the documentation to make it more appealing to the user, after the website is built.
 
-## The Javascript file "main.js"
+### The Javascript file "main.js"
 This is the exciting part of creating the map.
 
-### Initializing variables
+#### Initializing variables
 First I need the variables for setting the size of the window and initializing centered, which will be used later, with the path:
 ```
 var width = 1500,
@@ -76,7 +84,7 @@ The class "Background" in css file:
 }
 ```
 
-### Drawing Shapes
+#### Drawing Shapes
 The function for drawing the municipalities and Lake of Constance. All municipalities get the CSS-Id "municipalities" and the click and hover event.
 
 ```
@@ -131,10 +139,10 @@ And those are the CSS-Ids:
 }
 ```
 
-### Mouse Events
+#### Mouse Events
 To make the map more interactive, an hover and a click event was given to the shapes.
 
-#### Hover event
+##### Hover event
 Change the color to orange, when the mouse is hovering on the shape.
 ```
 #municipalities .active {
@@ -262,11 +270,8 @@ var muniArr = [
 Believe me, it wasn't pleasant to write all the names. But it won't stay forever, because I'll find a way to output the names from somewhere else.
 
 
-## Upcoming features
 
-* Window for visualising data, for example the number of citizens for each municipality. The website will get this data from opendata.ch
-* Window for showing pictures of the landscape of every municipality. It will get those pictures from the websites of the municipalities, instagram (perhaps), Google Images (perhaps) or from better sources.
-* Moving in zoom
+
 
 ## Sources
 
